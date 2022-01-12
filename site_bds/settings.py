@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'site_bds.wsgi.application'
 DATABASES = {
        'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd80ltul1gta5r5',
-        'USER':'avnemhvudtujgr',
-        'PASSWORD':'14f4979cfd9a51d6b7023acd65a3017c3dc144f735ca7b51e0b9b88e53c997a4',
-        'HOST':'ec2-54-229-47-120.eu-west-1.compute.amazonaws.com',
+        'NAME': 'd3ull48fh7sn23',
+        'USER':'igrdgsvcxrrcqs',
+        'PASSWORD':'24f149cc254c1f08f99c53f76d81e950ca7fdb2cdc5ef9620f822c5d987352b7',
+        'HOST':'ec2-52-209-111-18.eu-west-1.compute.amazonaws.com',
         'PORT':'5432'
 
     }
@@ -133,3 +133,7 @@ STATICFILES_DIRS = (
     )
 STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
 django_heroku.settings(locals())
+
+MEDIA_URL = '/media/' 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+

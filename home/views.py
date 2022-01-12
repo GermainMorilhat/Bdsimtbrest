@@ -7,5 +7,7 @@ def home(request):
 
 def article_id(request,id):
     article=Article.objects.get(id=id)
-    data={"nom":article.nom,"auteur":article.auteur,"date":article.date,"avatar":"assets"+article.images.url,"description":article.description,"contenu":article.contenu}
-    return render(request,'home/articles.html',data)
+    return render(request,'home/articles.html',{'article':article})
+
+def sports(request):
+        return render(request,'home/sports.html')

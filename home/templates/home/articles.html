@@ -1,33 +1,30 @@
 {% extends 'home/base.html' %}
-
+{% load static %}
 {% block title %}Articles{% endblock %}
 
 {% block styles %}
 
 {% endblock %}
-
-{% block body %}
+{% block content %}
 <div class="container">
     <div class="row">
       <div class="col-sm-4">
         <div class="sidebar">
         <h4 style="font-style: italic;">Autres articles : </h4> <br>
-        <span *ngFor="let article of other_articles| keyvalue">
-            <a href="{{'https://bdsimtabrest.herokuapp.com/'+'articles/'+article.value.id}}" style="color:rgb(238, 234, 234);"> {{article.value.nom}}</a>
-            <br>
-            </span>
+   
         
     </div>
         </div>
       <div class="col-xl">
-        <h1>{{article_data.nom}}</h1>
+        <h1>{{article.nom}}</h1>
         <img
-        src="{{article_data.avatar}}"
+        src="{{article.images.url }}"
         alt="thumb"
         class="img-fluid img-lg"
       />     
       <br>
-      <br>   <div [innerHTML]='article_data.contenu' style="text-align: left;"></div>
+      {{article.contenu|safe}}
+      <br>   <div {{article.contenu}} style="text-align: left;"></div>
 
       </div>
     </div>
