@@ -10,4 +10,5 @@ def article_id(request,id):
     return render(request,'home/articles.html',{'article':article})
 
 def sports(request):
-        return render(request,'home/sports.html')
+    sport_data=Sport.objects.all()   
+    return render(request,'home/sports.html',{'sports':sport_data})
