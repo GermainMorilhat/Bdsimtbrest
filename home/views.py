@@ -14,10 +14,11 @@ def sports(request):
 def home(request):
     articles_data=Article.objects.all()
     nbr_articles=len(articles_data)
-    last_article=Article.objects.get(id=nbr_articles)
+    last_id=Article.objects.latest('id').id
+    last_article=Article.objects.get(id=last_id)
     data={}
     data['last_article']=last_article
-    print(data,nbr_articles)
+    print(data,last_id)
     for i in range(1,4):
         print(i)
         try:
