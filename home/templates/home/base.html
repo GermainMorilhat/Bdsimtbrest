@@ -11,34 +11,26 @@
     </head>
     <body id="page-top" style="background-color:#2c2c2c;">
 
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase bg-transparent " id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" style="color: seagreen;" href="./">Bureau des Sports</a>
-                
-                <button class="navbar-toggler" style="border-color: white;"type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link" href="./sports">Sports</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./atlanticup">AtlantiCup</a>
-                    </li>
-              
-                  </ul>
-                </div>
 
-            </div>
-        </nav> 
+        <nav class="navbar navbar-expand-lg bg-dark text-uppercase fixed-top" id="mainNav">
+          <div class="container" >
+              <a class="navbar-brand" href="./" style="color: seagreen;">Bureau des Sports</a>
+              <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  Menu
+                  <i class="fas fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ms-auto">
+                      <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./sports">Sports</a></li>
+                      <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./Atlanticup">AtlantiCup</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+        
       
-       <section class="content" style="color: white;" >
+       <section class="content" style="color: white; margin-top: 10%;" >
          {% block content %}
       
          {% endblock %}
@@ -96,5 +88,13 @@
   </footer>
   <!-- Footer -->
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="{% static 'js/scripts.js' %}"></script>
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+  <!-- * *                               SB Forms JS                               * *-->
+  <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     
 </html>
