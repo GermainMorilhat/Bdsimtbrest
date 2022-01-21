@@ -11,9 +11,8 @@
       <div class="col-sm-4">
         <div class="sidebar">
         <h4 style="font-style: italic;">Autres articles : </h4> <br>
-        {% for article in articles %}
-
-        <a href="./articles/{{article.id}}" style="color:rgb(238, 234, 234);"> {{article.nom}}</a>
+        {% for article in other_articles %}
+        <a href="./{{article.id}}" style="color:rgb(238, 234, 234);"> {{article.nom}}</a>
             <br>
    {% endfor %}
         

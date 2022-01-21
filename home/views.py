@@ -5,7 +5,15 @@ from .models import Article,Sport
 
 def article_id(request,id):
     article=Article.objects.get(id=id)
-    return render(request,'home/articles.html',{'article':article})
+    articles_data=Article.objects.all()
+    other_articles=[]
+    id_list=articles_data.values_list('id', flat=True)
+    for i in id_list:
+        if i==id:
+            pass
+        else:
+            other_articles.append(Article.objects.get(id=i))
+    return render(request,'home/articles.html',{'article':article,'other_articles':other_articles})
 
 def sports(request):
     sport_data=Sport.objects.all()   
@@ -13,18 +21,23 @@ def sports(request):
 
 def home(request):
     articles_data=Article.objects.all()
+    id_list=articles_data.values_list('id', flat=True)
     nbr_articles=len(articles_data)
-    last_id=Article.objects.latest('id').id
-    last_article=Article.objects.get(id=last_id)
+    last_id=articles_data.latest('id').id
+    print(id_list,last_id)
+    last_article=articles_data.get(id=last_id)
     data={}
     data['last_article']=last_article
-    print(data,last_id)
-    for i in range(1,4):
-        print(i)
+    data['other_articles']={}
+    print("test",id_list[nbr_articles-4:nbr_articles-1])
+    j=1
+    for i in id_list[nbr_articles-4:nbr_articles-1]:
         try:
-            data[str(i)]=Article.objects.get(id=nbr_articles-i)
+            data['other_articles'][str(j)]=Article.objects.get(id=i)
+            j+=1
         except:
             print("L'article n'existe pas")
         else:
             pass
+    print(data)
     return render(request,'home/home.html',data)
