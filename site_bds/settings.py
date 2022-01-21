@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-from pickle import FALSE
 import django_heroku
 
 
@@ -27,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '1#2)7w6^4no)2r6a(e(dwwud*pma833*=4f3h#6qe9o8jgthl5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = FALSE
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
