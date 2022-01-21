@@ -9,20 +9,20 @@
 
         {% block styles %}{% endblock %}
     </head>
-    <body id="page-top" style="background-color:#2c2c2c;">
+    <body id="page-top" style="background-color:#444444;">
 
 
-        <nav class="navbar navbar-expand-lg bg-dark text-uppercase fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav" style="background-color: #191A19">
           <div class="container" >
-              <a class="navbar-brand" href="https://bdsimtbrest.herokuapp.com/" style="color: seagreen;">Bureau des Sports</a>
+              <a class="navbar-brand" href="https://bdsimtbrest.herokuapp.com/" style="color: #0c6300;"><b>Bureau des Sports</b></a>
               <button class="navbar-toggler text-uppercase font-weight-bold bg-dark text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                   Menu
                   <i class="fas fa-bars"></i>
               </button>
               <div class="collapse navbar-collapse" id="navbarResponsive">
                   <ul class="navbar-nav ms-auto">
-                      <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://bdsimtbrest.herokuapp.com/sports">Sports</a></li>
-                      <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://bdsimtbrest.herokuapp.com/Atlanticup">AtlantiCup</a></li>
+                      <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://bdsimtbrest.herokuapp.com/sports" style="color: #EDEDED;">Sports</a></li>
+                      <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://bdsimtbrest.herokuapp.com/Atlanticup" style="color: #EDEDED;">AtlantiCup</a></li>
                   </ul>
               </div>
           </div>
@@ -30,7 +30,7 @@
 
         
       
-       <section class="content" style="color: white; margin-top: 10%;" >
+       <section class="content" style="color: #EDEDED; margin-top: 10%; background-color: #444444;" >
          {% block content %}
       
          {% endblock %}
@@ -42,10 +42,10 @@
         
 
         <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+<footer class="text-center text-lg-start bg-light text-muted" >
 
     <!-- Section: Links  -->
-    <section class="" style="background-color: #2c2c2c; color:white; ">
+    <section class="" style="background: linear-gradient(#444444, #191A19); color:#EDEDED;">
       <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->
         <div class="row mt-3">
@@ -67,10 +67,10 @@
               Contact
             </h6>
             <p><i class="fas fa- home me-3"></i> 
-            <a href="https://www.facebook.com/bdsIMT"> Facebook</a></p>
+            <a href="https://www.facebook.com/bdsIMT" style="color:#EDEDED;"> Facebook</a></p>
             <p>
               <i class="fas fa-envelope me-3"></i>
-              <a href="https://www.instagram.com/lpa__imt/">Instagram</a>
+              <a href="https://www.instagram.com/lpa__imt/" style="color:#EDEDED;">Instagram</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -81,7 +81,7 @@
     <!-- Section: Links  -->
   
     <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.85); color:white;">
+    <div class="text-center p-4" style="background-color: #191A19; color:#EDEDED;">
       © 2021 Copyright: Bureau des Sports IMT Atlantique Brest
     </div>
     <!-- Copyright -->
